@@ -11,10 +11,10 @@ class ValidatesIdentity
 end
 
 # Legal
-ValidatesIdentity.register_legal_identity_type('MX_RFCL', ValidatesIdentity::MxRfc::LegalValidator)
-ValidatesIdentity::ShouldaMatchers.register_legal_allowed_values('MX_RFCL', %w[DSR850311SA3])
-ValidatesIdentity::ShouldaMatchers.register_legal_disallowed_values('MX_RFCL', %w[HEGG560427MVCRRL04 DSRT850311SA3])
+ValidatesIdentity.register_legal_identity_type('MX_RFC_LEGAL', ValidatesIdentity::MxRfc::LegalValidator)
+ValidatesIdentity::ShouldaMatchers.register_legal_allowed_values('MX_RFC_LEGAL', %w[DSR850311SA3])
+ValidatesIdentity::ShouldaMatchers.register_legal_disallowed_values('MX_RFC_LEGAL', %w[HEGG560427MVCRRL04 DSRT850311SA3])
 # Person
-ValidatesIdentity.register_person_identity_type('MX_RFCP', ValidatesIdentity::MxRfc::PersonValidator)
-ValidatesIdentity::ShouldaMatchers.register_person_allowed_values('MX_RFCP', %w[DSRT850311SA3])
-ValidatesIdentity::ShouldaMatchers.register_person_disallowed_values('MX_RFCP', %w[HEGG560427MVCRRL04 DSR850311SA3])
+ValidatesIdentity.register_person_identity_type('MX_RFC_PERSON', ValidatesIdentity::MxRfc::PersonValidator)
+ValidatesIdentity::ShouldaMatchers.register_person_allowed_values('MX_RFC_PERSON', %w[DSRT850311SA3])
+ValidatesIdentity::ShouldaMatchers.register_person_disallowed_values('MX_RFC_PERSON', %w[HEGG560427MVCRRL04 DSR850311SA3])
