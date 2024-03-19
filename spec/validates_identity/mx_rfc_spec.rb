@@ -10,7 +10,7 @@ RSpec.describe ValidatesIdentity::MxRfc do
       context 'without formatting' do
         before do
           user.legal_identity = 'DSR850311SA3'
-          user.legal_identity_type = 'MX_RFCL'
+          user.legal_identity_type = 'MX_RFC_LEGAL'
           user.valid?
         end
 
@@ -22,7 +22,7 @@ RSpec.describe ValidatesIdentity::MxRfc do
       context 'with formatting' do
         before do
           user.legal_formatted_identity = 'DSR850311SA3'
-          user.legal_identity_type = 'MX_RFCL'
+          user.legal_identity_type = 'MX_RFC_LEGAL'
           user.valid?
         end
 
@@ -35,7 +35,7 @@ RSpec.describe ValidatesIdentity::MxRfc do
     context 'with an invalid value' do
       before do
         user.legal_identity = '123456'
-        user.legal_identity_type = 'MX_RFCL'
+        user.legal_identity_type = 'MX_RFC_LEGAL'
         user.valid?
       end
 
@@ -50,7 +50,7 @@ RSpec.describe ValidatesIdentity::MxRfc do
       context 'without formatting' do
         before do
           user.person_identity = 'DSRT850311SA3'
-          user.person_identity_type = 'MX_RFCP'
+          user.person_identity_type = 'MX_RFC_PERSON'
           user.valid?
         end
 
@@ -62,7 +62,7 @@ RSpec.describe ValidatesIdentity::MxRfc do
       context 'with formatting' do
         before do
           user.person_formatted_identity = 'DSRT850311SA3'
-          user.person_identity_type = 'MX_RFCP'
+          user.person_identity_type = 'MX_RFC_PERSON'
           user.valid?
         end
 
@@ -75,7 +75,7 @@ RSpec.describe ValidatesIdentity::MxRfc do
     context 'with an invalid value' do
       before do
         user.person_identity = '123456'
-        user.person_identity_type = 'MX_RFCP'
+        user.person_identity_type = 'MX_RFC_PERSON'
         user.valid?
       end
 
